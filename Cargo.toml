@@ -5,10 +5,12 @@ authors = ["Rax Ixor <raxixor@rax.ee>"]
 edition = "2018"
 description = "Various utilities created by Lys/Rax for personal use. You may find them helpful."
 license = "MIT"
-license-file = "LICENSE.md"
 readme = "README.md"
 repository = "https://github.com/raxixor/lysutil"
+homepage = "https://github.com/raxixor/lysutil"
 keywords = ["utilities", "util"]
+documentation = ""
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]
+string-builder = "0.2"
