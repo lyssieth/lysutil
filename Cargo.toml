@@ -1,6 +1,6 @@
 [package]
 name = "lysutil"
-version = "0.0.1"
+version = "0.0.2"
 authors = ["Rax Ixor <raxixor@rax.ee>"]
 edition = "2018"
 description = "Various utilities created by Lys/Rax for personal use. You may find them helpful."
@@ -9,6 +9,7 @@ readme = "README.md"
 repository = "https://github.com/raxixor/lysutil"
 homepage = "https://github.com/raxixor/lysutil"
 keywords = ["utilities", "util"]
+documentation = "https://docs.rs/lysutil"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 [dependencies]

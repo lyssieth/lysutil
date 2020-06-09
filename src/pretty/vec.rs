@@ -3,7 +3,7 @@
 use std::fmt::{Debug, Display};
 use string_builder::Builder;
 
-/// Returns a given Vec<T> as a String, prettified.
+/// Returns a given Vec<T: Display> as a String, prettified.
 ///
 /// # Arguments
 ///
@@ -50,7 +50,7 @@ where
     }
 }
 
-/// Returns a given Vec<T> as a String, prettified.
+/// Returns a given Vec<T: Debug> as a String, prettified.
 ///
 /// # Arguments
 ///
