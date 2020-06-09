@@ -1,6 +1,6 @@
 [package]
 name = "lysutil"
-version = "1.0.0"
+version = "0.0.1"
 authors = ["Rax Ixor <raxixor@rax.ee>"]
 edition = "2018"
 description = "Various utilities created by Lys/Rax for personal use. You may find them helpful."
