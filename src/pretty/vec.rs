@@ -1,3 +1,5 @@
+//! Prettifies Vec-s
+
 use std::fmt::{Debug, Display};
 use string_builder::Builder;
 
