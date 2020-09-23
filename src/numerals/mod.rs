@@ -9,7 +9,7 @@ pub const M: usize = 1000;
 pub fn from_numerals(num: &str) -> usize {
     let chars: Vec<&str> = num.split("").collect();
     let mut numbers: Vec<&usize> = vec![];
-    let mut sum = 0usize;
+    let mut _sum = 0usize;
 
     for x in chars {
         let n = match x {
@@ -26,13 +26,13 @@ pub fn from_numerals(num: &str) -> usize {
         numbers.push(n);
     }
 
-    for i in 0..numbers.len() {
-        break;
-    }
+    // for i in 0..numbers.len() {
+    //     break;
+    // }
 
     0
 }
 
-pub fn to_numerals(num: &usize) -> String {
+pub fn to_numerals(_num: &usize) -> String {
     "".to_string()
 }
