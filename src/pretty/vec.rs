@@ -28,25 +28,25 @@ pub fn pretty_vec<T>(v: Vec<T>) -> String
 where
     T: Display,
 {
-    if v.len() > 1 {
-        let mut b = Builder::default();
-        b.append("[");
-        let mut iters = 0;
-        for x in &v {
-            if iters < v.len() - 1 {
-                b.append(format!("{}, ", *x));
-                iters += 1;
-            } else {
-                b.append(format!("{}", *x));
+    match v.len() {
+        2..=0xffffffff => {
+            let mut b = Builder::default();
+            b.append("[");
+            let mut iters = 0;
+            for x in &v {
+                if iters < v.len() - 1 {
+                    b.append(format!("{}, ", *x));
+                    iters += 1;
+                } else {
+                    b.append(format!("{}", *x));
+                }
             }
-        }
 
-        b.append("]");
-        b.string().unwrap()
-    } else if v.len() == 1 {
-        format!("[{}]", v[0])
-    } else {
-        format!("[]")
+            b.append("]");
+            b.string().unwrap()
+        }
+        1 => format!("[{}]", v[0]),
+        _ => "[]".to_string(),
     }
 }
 
@@ -75,24 +75,24 @@ pub fn pretty_vec_debug<T>(v: Vec<T>) -> String
 where
     T: Debug,
 {
-    if v.len() > 1 {
-        let mut b = Builder::default();
-        b.append("[");
-        let mut iters = 0;
-        for x in &v {
-            if iters < v.len() - 1 {
-                b.append(format!("{:?}, ", *x));
-                iters += 1;
-            } else {
-                b.append(format!("{:?}", *x));
+    match v.len() {
+        2..=0xffffffff => {
+            let mut b = Builder::default();
+            b.append("[");
+            let mut iters = 0;
+            for x in &v {
+                if iters < v.len() - 1 {
+                    b.append(format!("{:?}, ", *x));
+                    iters += 1;
+                } else {
+                    b.append(format!("{:?}", *x));
+                }
             }
-        }
 
-        b.append("]");
-        b.string().unwrap()
-    } else if v.len() == 1 {
-        format!("[{:?}]", v[0])
-    } else {
-        format!("[]")
+            b.append("]");
+            b.string().unwrap()
+        }
+        1 => format!("[{:?}]", v[0]),
+        _ => "[]".to_string(),
     }
 }
